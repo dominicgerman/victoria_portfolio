@@ -6,3 +6,7 @@ nav div a.active {
   text-decoration: underline;
   text-underline-offset: 5px;
 }
+
+html {
+  background-color: rgb(245 245 244);
+}

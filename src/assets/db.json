@@ -8,7 +8,7 @@
           "dates": "Jan - Apr 2022"
         },
         "description": "Creating a net new home screen where users can easily access their accounts, check in on their high-level financial picture, and explore all M1 has to offer.",
-        "imagePath": ""
+        "imagePath": "src/assets/case_study_1/hero.png"
       },
       "context": [
         "The company wanted to untangle its respective products so that users can more easily onboard through the avenue that best suits their financial needs.",
@@ -29,35 +29,35 @@
       "sprintDetails": "Because of the implications of this projects and it’s impact on our users, we were given the space to conduct a true Google design sprint. The sprint spanned the course of four days.",
       "details": [
         {
-          "imagePath": "",
+          "imagePath": "src/assets/case_study_1/1.png",
           "text": "A snippet of activities from our Stakeholder discovery workshop. Together, we aligned on business and product outcomes, generated and prioritized features, and ideated enough for the team to feel comfortable moving into the design phase. "
         },
         {
-          "imagePath": "",
+          "imagePath": "src/assets/case_study_1/2.png",
           "text": "Three mobile prototypes created in the day following our discovery workshop. We wanted to to test multiple variations of the same features to gather nuanced feedback from our test participants."
         },
         {
-          "imagePath": "",
+          "imagePath": "src/assets/case_study_1/3.png",
           "text": "Above are the folks we conducted user testing with, placed on a spectrum of financial expertise. It has been important to gather feedback from those who are both financially savvy and novice investors. Three out of the four participants chosen had expressed interest in an Overview Hub prior to our sessions together."
         },
         {
-          "imagePath": "",
+          "imagePath": "src/assets/case_study_1/4.png",
           "text": "We experimented with different ways of visualizing a users net worth and breakdown of assets/liabilities vs. net worth over time. There was no clear preference among our users when it came to which worked better. We went with the bar chart after learning that engineering would need three months for the line graph, they had yet to format the historical data in their back end."
         },
         {
-          "imagePath": "",
+          "imagePath": "src/assets/case_study_1/5.png",
           "text": "When it came to the way accounts are visualized, the widget pattern was the clear preference over the balance sheet. This was a surprising insight, but that is why we do testing :) The design on the right was deemed easier to digest, a cleaner layout, and users appreciated the asset and liabilities categories."
         },
         {
-          "imagePath": "",
+          "imagePath": "src/assets/case_study_1/6.png",
           "text": "We knew we needed a transfers component on the home screen because it was being booted from the footer navigation. The transfer list was the clear winner due to how easy it was to understand at a glance, as well as the clear “New Transfer” CTA."
         },
         {
-          "imagePath": "",
+          "imagePath": "src/assets/case_study_1/7.png",
           "text": "After releasing to the wild, we have been receiving incredible data and analytics on usage and taps, as well as a free form feedback form that we placed at the bottom of the screen. Having both quantitative and qualitative data has made it much easier to understand how to prioritize future feature releases."
         },
         {
-          "imagePath": "",
+          "imagePath": "src/assets/case_study_1/8.png",
           "text": "When it comes to what we would like to add to the home screen next, we are exploring a net worth graph as well as a “Yours to build” section to motivate users to explore M1’s product offerings even more."
         }
       ],
@@ -75,7 +75,7 @@
           "dates": "Mar - Jun 2022"
         },
         "description": "Reimagining the information architecture for the entire M1 platform, the goal is to create a simple and intuitive experience for users who are looking to optimize their workflows.",
-        "imagePath": ""
+        "imagePath": "src/assets/case_study_2/hero.png"
       },
       "context": [
         "The M1 app has been created in stages. Because products and flows were created at different times, they did not always follow the same patterns. Also, smaller features were slotted in to what already existed, not what was ideal from a first principles perspective. This has led to an app that is not cohesive.",
@@ -90,27 +90,27 @@
       },
       "details": [
         {
-          "imagePath": "",
+          "imagePath": "src/assets/case_study_2/1.png",
           "text": "The CEO of M1 approached me and one other designer to tackle a big project: to restructure the entire information architecture of the M1 platform. As a systems thinker, these types of design problems are my favorite. Above are a few screenshots of our discovery sessions together and what we used to hone in on the direction for the new IA."
         },
         {
-          "imagePath": "",
+          "imagePath": "src/assets/case_study_2/2.png",
           "text": "We knew we wanted to move forward with a side navigation, above are just a few of the dozens of explorations we reviewed."
         },
         {
-          "imagePath": "",
+          "imagePath": "src/assets/case_study_2/3.png",
           "text": "We also knew we wanted a universal transfers “drawer” that could be accessed from anywhere on the platform. Moving money is the number one action we want our users to take, so making this workflow seamless was a huge priority."
         },
         {
-          "imagePath": "",
+          "imagePath": "src/assets/case_study_2/4.png",
           "text": "We used Maze for automated user testing for this effort, above is a heatmap produced by one of the prompts we gave users."
         },
         {
-          "imagePath": "",
+          "imagePath": "src/assets/case_study_2/5.png",
           "text": "There were just as many conversation around wording and vernacular as there were on the visual designs. When we polled with our users, they gave us their feedback on how we should communicate the transfer action across the platform, which we considered heavily when working with our UI copywriter."
         },
         {
-          "imagePath": "",
+          "imagePath": "src/assets/case_study_2/6.png",
           "text": "The image above displays the evolution of the M1 platform."
         }
       ],
@@ -128,30 +128,30 @@
           "dates": "Oct 2019 - Aug 2020"
         },
         "description": "Redesigning the investment planning portal for users by creating a simple, intuitive user flow that empower investors to make the right investment decisions for their personal needs.",
-        "imagePath": ""
+        "imagePath": "src/assets/case_study_3/hero.png"
       },
       "context": [
         "Northern Trust purchased an investment planning portal called Emotomy to rebrand as their own and provide to their customer base. Emotomy’s interface was deemed confusing by users and needed product to reimagine the user experience from the ground up."
       ],
       "details": [
         {
-          "imagePath": "",
+          "imagePath": "src/assets/case_study_3/1.png",
           "text": "Before addressing the user experience, we first needed to conduct a heuristic analysis of some of the design patterns. We made recommendations throughout the app for improving the UI, which were much needed recommendations."
         },
         {
-          "imagePath": "",
+          "imagePath": "src/assets/case_study_3/2.png",
           "text": "After that, we created both mobile and web designs, keeping the product and business outcomes in mind. We worked closely with stakeholders to align on direction, then put mocks in front of existing users for testing."
         },
         {
-          "imagePath": "",
+          "imagePath": "src/assets/case_study_3/3.png",
           "text": "The testing synthesis was well received and gave us great insights on how to iterate and move forward."
         },
         {
-          "imagePath": "",
+          "imagePath": "src/assets/case_study_3/4.png",
           "text": "A lot of consideration went into aiding the user in understanding the complex world of finance."
         },
         {
-          "imagePath": "",
+          "imagePath": "src/assets/case_study_3/5.png",
           "text": "The output was a simple, intuitive, and clutter free workflow where users can easily input their information and receive a portfolio match that best suits their needs."
         }
       ],
@@ -169,7 +169,7 @@
           "dates": "Aug 2020 - Mar 2021"
         },
         "description": "Redesigning the individual investment portfolio screen as part of their investment planning flow. ",
-        "imagePath": ""
+        "imagePath": "src/assets/case_study_4/hero.png"
       },
       "context": [
         "Northern Trust purchased an investment planning portal called Emotomy to rebrand as their own and provide to their customer base. Part of the investment planning tool matches you to a unique investment vehicle that best suits the inestors needs, but the screens themselves were clunky and hard to digest.",
@@ -177,15 +177,21 @@
       ],
       "details": [
         {
-          "imagePath": "",
+          "imagePath": "src/assets/case_study_4/1.png",
           "text": "Part of this process meant we had to dive deep into the current investor experience to understand how they manage their portfolios. There were several journey maps, site maps, and affinity maps created to understand how to best tackle this design problem."
         },
         {
-          "imagePath": "",
+          "imagePath": "src/assets/case_study_4/2.png",
           "text": "User testing gave us insight into the pain points investors were experiencing managing their investments."
         },
-        { "imagePath": "", "text": "A few screens of the mobile experience." },
-        { "imagePath": "", "text": "A few screens of the web experience." }
+        {
+          "imagePath": "src/assets/case_study_4/3.png",
+          "text": "A few screens of the mobile experience."
+        },
+        {
+          "imagePath": "src/assets/case_study_4/4.png",
+          "text": "A few screens of the web experience."
+        }
       ],
       "projectLink": {
         "name": "investment planning tool",

@@ -2,6 +2,7 @@ import { Link, useParams } from 'react-router-dom'
 import Hero from './CaseStudies/Hero'
 import Description from './CaseStudies/Description'
 import Detail from './CaseStudies/Detail'
+import Pagination from './Pagination'
 
 type Props = {
   study: {
@@ -59,27 +60,16 @@ export default function CaseStudy({ study, length }: Props) {
           ></Detail>
         ))}
       </ul>
-      <p>
-        Check out the <Link to={projectLink.url}>{projectLink.name}</Link> for
-        yourself.
+      <p className="text-center text-xl">
+        Check out the{' '}
+        <Link to={projectLink.url}>
+          <span className="underline underline-offset-2">
+            {projectLink.name}
+          </span>
+        </Link>{' '}
+        for yourself.
       </p>
-
-      {id > 1 && id < length ? (
-        <div className="my-48 text-7xl">
-          <Link to={`/case-study-${id - 1}`}> {'<'} Prev case study</Link>
-          <Link to={`/case-study-${id + 1}`}>Next case study {'>'}</Link>
-        </div>
-      ) : (
-        <div className="my-48 text-7xl">
-          {id === 1 ? (
-            <Link to={`/case-study-${id + 1}`} className="my-48 text-7xl">
-              Next case study {'>'}
-            </Link>
-          ) : (
-            <Link to={`/case-study-${id - 1}`}> {'<'} Prev case study</Link>
-          )}
-        </div>
-      )}
+      <Pagination length={length} id={id} />
     </>
   )
 }

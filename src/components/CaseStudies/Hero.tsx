@@ -1,5 +1,3 @@
-import pic from '../../assets/notebook.jpg'
-
 type Props = {
   title: string
   role: {
@@ -12,16 +10,16 @@ type Props = {
 
 export default function Hero({ title, role, description, img }: Props) {
   return (
-    <div className="grid grid-cols-2">
-      <div className="flex flex-col">
-        <span>
+    <div className="grid grid-cols-2 gap-x-16 my-20">
+      <div className="flex flex-col gap-10 justify-center">
+        <strong className="text-xl">
           {role.title} | {role.dates}
-        </span>
-        <h2>{title}</h2>
-        <p>{description}</p>
+        </strong>
+        <h2 className="text-5xl">{title}</h2>
+        <p className="text-2xl">{description}</p>
       </div>
-      <div>
-        <img src={pic} alt="pic" />
+      <div className="justify-self-center">
+        <img src={img} alt="pic" className="rounded-2xl max-h-128" />
       </div>
     </div>
   )

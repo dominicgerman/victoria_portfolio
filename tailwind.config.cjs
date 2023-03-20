@@ -10,6 +10,9 @@ module.exports = {
         // Simple 9 row grid
         9: 'repeat(9, minmax(0, 1fr))',
       },
+      maxHeight: {
+        128: '32rem',
+      },
     },
   },
   plugins: [],
