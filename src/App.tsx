@@ -6,7 +6,7 @@ import Navbar from './components/Navbar'
 export default function App() {
   return (
     <>
-      <div>
+      <div className="mx-11 my-6 font-serif">
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />}></Route>

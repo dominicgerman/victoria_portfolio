@@ -4,9 +4,18 @@ type Props = {}
 
 export default function Navbar({}: Props) {
   return (
-    <nav>
-      <NavLink to="/">Work</NavLink>
-      <NavLink to="/about">About</NavLink>
+    <nav className="flex justify-between">
+      <NavLink to="/" className="font-serif text-3xl">
+        Victoria German
+      </NavLink>
+      <div className="flex gap-4">
+        <NavLink to="/" className="font-serif text-lg">
+          Work
+        </NavLink>
+        <NavLink to="/about" className="font-serif text-lg">
+          About
+        </NavLink>
+      </div>
     </nav>
   )
 }
