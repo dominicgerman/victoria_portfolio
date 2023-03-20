@@ -1,5 +1,7 @@
+import Detail from './Detail'
+
 type Props = {}
 
 export default function DetailsList({}: Props) {
-  return <div>DetailsList</div>
+  return <></>
 }
