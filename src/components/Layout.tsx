@@ -1,5 +1,7 @@
-type Props = {}
+type Props = {
+  children: any
+}
 
-export default function Layout({}: Props) {
-  return <div>Layout</div>
+export default function Layout({ children }: Props) {
+  return <div className="mx-16 my-10 font-serif">{children}</div>
 }
