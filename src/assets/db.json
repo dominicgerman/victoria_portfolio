@@ -61,7 +61,10 @@
           "text": "When it comes to what we would like to add to the home screen next, we are exploring a net worth graph as well as a “Yours to build” section to motivate users to explore M1’s product offerings even more."
         }
       ],
-      "projectLinkName": "home screen",
+      "projectLink": {
+        "name": "home screen",
+        "url": "https://m1.com"
+      },
       "id": 1
     },
     {
@@ -111,7 +114,10 @@
           "text": "The image above displays the evolution of the M1 platform."
         }
       ],
-      "projectLinkName": "new IRA",
+      "projectLink": {
+        "name": "new IA",
+        "url": "https://m1.com"
+      },
       "id": 2
     },
     {
@@ -149,8 +155,10 @@
           "text": "The output was a simple, intuitive, and clutter free workflow where users can easily input their information and receive a portfolio match that best suits their needs."
         }
       ],
-      "projectLinkName": "investment planning tool",
-
+      "projectLink": {
+        "name": "investment planning tool",
+        "url": "https://www.emotomy.com/emotomy/emotomy-pws/"
+      },
       "id": 3
     },
     {
@@ -179,7 +187,10 @@
         { "imagePath": "", "text": "A few screens of the mobile experience." },
         { "imagePath": "", "text": "A few screens of the web experience." }
       ],
-      "projectLinkName": "investment planning tool",
+      "projectLink": {
+        "name": "investment planning tool",
+        "url": "https://www.emotomy.com/emotomy/emotomy-pws/"
+      },
 
       "id": 4
     }
