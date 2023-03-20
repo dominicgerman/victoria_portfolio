@@ -9,7 +9,7 @@ export default function Navbar({}: Props) {
         Victoria German
       </NavLink>
       <div className="flex gap-4">
-        <NavLink to="/case-studies" className="font-serif text-lg">
+        <NavLink to="/" className="font-serif text-lg">
           Work
         </NavLink>
         <NavLink to="/about" className="font-serif text-lg">

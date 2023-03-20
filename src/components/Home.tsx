@@ -14,7 +14,7 @@ export default function Home({}: Props) {
         <h3>Work</h3>
         <div className="flex flex-col gap-7">
           {db.caseStudies.map((item) => (
-            <Link key={item.id} to={`./case-studies/${item.id}`}>
+            <Link key={item.id} to={`./case-study-${item.id}`}>
               <span>🔒 {item.hero.title}</span>
             </Link>
           ))}

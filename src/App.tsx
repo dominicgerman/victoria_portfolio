@@ -16,8 +16,11 @@ export default function App() {
           <Route path="about" element={<About />}></Route>
           {db.caseStudies.map((item) => (
             <Route
-              path={`/case-studies-${item.id}`}
-              element={<CaseStudy study={item} />}
+              key={item.id}
+              path={`/case-study-${item.id}`}
+              element={
+                <CaseStudy study={item} length={db.caseStudies.length} />
+              }
             ></Route>
           ))}
         </Routes>

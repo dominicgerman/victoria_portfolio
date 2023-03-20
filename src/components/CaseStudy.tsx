@@ -30,12 +30,13 @@ type Props = {
     }
     id: number
   }
+  length: number
 }
 
-export default function CaseStudy({ study }: Props) {
-  const { id } = useParams()
-  console.log(id)
-  const { hero, context, details, sprintDetails, outcomes, projectLink } = study
+export default function CaseStudy({ study, length }: Props) {
+  const { hero, context, details, sprintDetails, outcomes, projectLink, id } =
+    study
+
   return (
     <>
       <Hero
@@ -62,6 +63,23 @@ export default function CaseStudy({ study }: Props) {
         Check out the <Link to={projectLink.url}>{projectLink.name}</Link> for
         yourself.
       </p>
+
+      {id > 1 && id < length ? (
+        <div className="my-48 text-7xl">
+          <Link to={`/case-study-${id - 1}`}> {'<'} Prev case study</Link>
+          <Link to={`/case-study-${id + 1}`}>Next case study {'>'}</Link>
+        </div>
+      ) : (
+        <div className="my-48 text-7xl">
+          {id === 1 ? (
+            <Link to={`/case-study-${id + 1}`} className="my-48 text-7xl">
+              Next case study {'>'}
+            </Link>
+          ) : (
+            <Link to={`/case-study-${id - 1}`}> {'<'} Prev case study</Link>
+          )}
+        </div>
+      )}
     </>
   )
 }
