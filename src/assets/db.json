@@ -1,4 +1,50 @@
 {
+  "about": {
+    "content": [
+      {
+        "text": "Currently a product designer in the world of fintech, I’m a systems thinker who is passionate about people and how they move through the world. I enjoy improving digital experiences through research, effective communication and mindful execution. I believe in continuous learning and creative problem solving - so much so that I recently started mentoring at Designlab.",
+        "id": 1
+      },
+      {
+        "text": "If you’re wondering what I’m all about, I’m obsessed with all things art & design, I love biking and running in the summer, and teaching our mini aussienew tricks. Our favorite pandemic hobby has been growing herbs in our community garden, harvesting said herbs, and using them to garnish delicious at-home craft cocktails.",
+
+        "id": 2
+      }
+    ],
+    "skills": {
+      "heading": "Skills",
+      "items": [
+        "Experience design",
+        "UX Research",
+        "Information Architecture",
+        "Data Analytics",
+        "Prototyping",
+        "HTML & CSS",
+        "Brand Identity"
+      ]
+    },
+    "clients": {
+      "heading": "Select clients",
+      "items": [
+        "JP Morgan Chase",
+        "M1",
+        "Designlab",
+        "United Airlines",
+        "Northern Trust",
+        "Morningstar",
+        "Utah Olympic Legacy Foundation",
+        "Australia Zoo"
+      ]
+    },
+    "contact": {
+      "heading": "Say hello",
+      "content": "Looking to get in touch? I would love to hear from you, feel free to ",
+      "link": {
+        "text": "send me a message",
+        "url": "mailto:victoriamiagerman@gmail.com?subject=Hello"
+      }
+    }
+  },
   "caseStudies": [
     {
       "hero": {
