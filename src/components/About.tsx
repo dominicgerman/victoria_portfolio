@@ -3,9 +3,7 @@ import insta from '../assets/insta.png'
 import dribble from '../assets/dribble.png'
 import linkedin from '../assets/linkedin.png'
 
-type Props = {}
-
-export default function About({}: Props) {
+export default function About() {
   return (
     <>
       <div className="flex flex-col gap-4 my-24">

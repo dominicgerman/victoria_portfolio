@@ -2,9 +2,7 @@ import { useState } from 'react'
 import { useNavigate, useLocation } from 'react-router-dom'
 import { useAuth } from './Auth'
 
-type Props = {}
-
-export default function Login({}: Props) {
+export default function Login() {
   const [password, setPassword] = useState('')
   const [errorMessage, setErrorMessage] = useState(false)
 
@@ -20,11 +18,7 @@ export default function Login({}: Props) {
       navigate(redirectPath, { replace: true })
       setPassword('')
     } else {
-      //   setPassword('')
       setErrorMessage(true)
-      //   setTimeout(() => {
-      //     setErrorMessage(false)
-      //   }, 5000)
     }
     return
   }

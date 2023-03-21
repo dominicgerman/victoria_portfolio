@@ -1,8 +1,6 @@
 import { NavLink } from 'react-router-dom'
 
-type Props = {}
-
-export default function Navbar({}: Props) {
+export default function Navbar() {
   return (
     <nav className="flex justify-between">
       <NavLink to="/" className=" text-3xl">

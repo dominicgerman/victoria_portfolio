@@ -1,9 +1,7 @@
 import { Link } from 'react-router-dom'
 import db from '../assets/db.json'
 
-type Props = {}
-
-export default function Home({}: Props) {
+export default function Home() {
   return (
     <div>
       <h2 className="text-6xl max-w-4xl my-32">
