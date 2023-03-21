@@ -1,4 +1,4 @@
-import { Link, useParams } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import Hero from './CaseStudies/Hero'
 import Description from './CaseStudies/Description'
 import Detail from './CaseStudies/Detail'
@@ -45,12 +45,12 @@ export default function CaseStudy({ study, length }: Props) {
         role={hero.role}
         description={hero.description}
         img={hero.imagePath}
-      ></Hero>
+      />
       <Description
         context={context}
         outcomes={outcomes}
         sprintDetails={sprintDetails}
-      ></Description>
+      />
       <ul>
         {details.map((item) => (
           <Detail

@@ -2,9 +2,6 @@
 module.exports = {
   content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
   theme: {
-    fontFamily: {
-      serif: ['Garamond', 'serif'],
-    },
     extend: {
       gridTemplateRows: {
         // Simple 9 row grid
@@ -12,6 +9,9 @@ module.exports = {
       },
       maxHeight: {
         128: '32rem',
+      },
+      fontFamily: {
+        body: ['EB Garamond', 'serif'],
       },
     },
   },
