@@ -1,5 +1,6 @@
 import React from 'react'
 import { Routes, Route } from 'react-router-dom'
+import { QueryClientProvider, QueryClient, useQuery } from 'react-query'
 import AuthProvider from './components/utils/Auth'
 import RequireAuth from './components/utils/RequireAuth'
 import Layout from './components/Layout'
@@ -8,39 +9,39 @@ import Navbar from './components/Navbar'
 import Login from './components/utils/Login'
 import CaseStudy from './components/CaseStudy'
 import db from './assets/db.json'
+import axios from 'axios'
 const LazyAbout = React.lazy(() => import('./components/About'))
 
 export default function App() {
+  const queryClient = new QueryClient()
+
   return (
-    <AuthProvider>
-      <Layout>
-        <Navbar />
-        <Routes>
-          <Route path="/" element={<Home />}></Route>
-          <Route path="/login" element={<Login />}></Route>
-          <Route
-            path="about"
-            element={
-              <React.Suspense fallback="Loading...">
-                <LazyAbout />
-              </React.Suspense>
-            }
-          ></Route>
-          {db.caseStudies.map((item) => (
+    <QueryClientProvider client={queryClient}>
+      <AuthProvider>
+        <Layout>
+          <Navbar />
+          <Routes>
+            <Route path="/" element={<Home />}></Route>
+            <Route path="/login" element={<Login />}></Route>
             <Route
-              key={item.id}
-              path={`/case-study-${item.id}`}
+              path="about"
+              element={
+                <React.Suspense fallback="Loading...">
+                  <LazyAbout />
+                </React.Suspense>
+              }
+            ></Route>
+            <Route
+              path="case-studies/:id"
               element={
                 <RequireAuth>
-                  <CaseStudy study={item} length={db.caseStudies.length} />
+                  <CaseStudy />
                 </RequireAuth>
               }
-            >
-              {' '}
-            </Route>
-          ))}
-        </Routes>
-      </Layout>
-    </AuthProvider>
+            ></Route>
+          </Routes>
+        </Layout>
+      </AuthProvider>
+    </QueryClientProvider>
   )
 }

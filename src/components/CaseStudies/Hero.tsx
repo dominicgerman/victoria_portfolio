@@ -19,7 +19,11 @@ export default function Hero({ title, role, description, img }: Props) {
         <p className="text-2xl">{description}</p>
       </div>
       <div className="justify-self-center">
-        <img src={img} alt="pic" className="rounded-2xl max-h-128" />
+        <img
+          src={`http://localhost:1337${img}`}
+          alt="pic"
+          className="rounded-2xl max-h-128"
+        />
       </div>
     </div>
   )
