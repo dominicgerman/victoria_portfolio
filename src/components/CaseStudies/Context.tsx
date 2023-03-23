@@ -1,40 +1,50 @@
 type Props = {
   context: any
+  outcomes: any
+  otherDetails: any
 }
 
-export default function Context({ context }: Props) {
-  console.log(context)
-
+export default function Context({ context, outcomes, otherDetails }: Props) {
   return (
     <div className="max-w-5xl mx-auto text-2xl">
-      {/* <p className="mb-8 font-bold">Context</p>
-      <p className="mb-36">{Description}</p>
-      {Outcome ? (
+      <div className="mb-36">
+        <p className="mb-8 font-bold">Context</p>
+        {context.map((el: string) => (
+          <p key={el} className="mb-8">
+            {el}
+          </p>
+        ))}
+      </div>
+      {outcomes ? (
         <div className="grid grid-cols-2">
-          <div>
+          <div className="mb-36">
             <p className="mb-8 font-bold">Business Outcomes</p>
-            <ol className="mb-36 list-decimal">
-              {businessOutcomes.map((item: any) => (
-                <li className="mx-8">{item.Outcome}</li>
+            <ul>
+              {outcomes.business.map((item: any) => (
+                <li key={item} className="mb-3 mx-8 -indent-6">
+                  {item}
+                </li>
               ))}
-            </ol>
+            </ul>
           </div>
           <div>
             <p className="mb-8 font-bold">Product Outcomes</p>
-            <ol className="mb-36 list-decimal">
-              {productOutcomes.map((item: any) => (
-                <li className="mx-8">{item.Outcome}</li>
+            <ul>
+              {outcomes.product.map((item: any) => (
+                <li key={item} className="mb-3 mx-8 -indent-6">
+                  {item}
+                </li>
               ))}
-            </ol>
+            </ul>
           </div>
         </div>
       ) : null}
-      {SprintDetails ? (
-        <>
-          <p className="mb-8 font-bold">Design Sprint</p>
-          <p className="mb-36">{}</p>
-        </>
-      ) : null} */}
+      {otherDetails ? (
+        <div className="mb-36">
+          <p className="mb-8 font-bold">{otherDetails.heading}</p>
+          <p>{otherDetails.text}</p>
+        </div>
+      ) : null}
     </div>
   )
 }

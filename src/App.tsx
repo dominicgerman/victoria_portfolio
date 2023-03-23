@@ -1,5 +1,5 @@
 import React from 'react'
-import { Routes, Route } from 'react-router-dom'
+import { Routes, Route, Outlet } from 'react-router-dom'
 import { useQuery } from 'react-query'
 import { getCaseStudies } from './components/utils/sanity'
 import CaseStudyContext from './components/utils/CaseStudyContext'
@@ -18,8 +18,6 @@ export default function App() {
     return getCaseStudies()
   })
 
-  console.log(data)
-
   return (
     <CaseStudyContext.Provider value={data}>
       <AuthProvider>
@@ -27,6 +25,14 @@ export default function App() {
           <Navbar />
           <Routes>
             <Route path="/" element={<Home />}></Route>
+            <Route
+              path="/case-studies/:index"
+              element={
+                <RequireAuth>
+                  <CaseStudy />
+                </RequireAuth>
+              }
+            ></Route>
             <Route path="/login" element={<Login />}></Route>
             <Route
               path="about"
@@ -36,16 +42,6 @@ export default function App() {
                 </React.Suspense>
               }
             ></Route>
-            {data?.map(() => (
-              <Route
-                path="/case-studies/:id"
-                element={
-                  <RequireAuth>
-                    <CaseStudy />
-                  </RequireAuth>
-                }
-              ></Route>
-            ))}
           </Routes>
         </Layout>
       </AuthProvider>

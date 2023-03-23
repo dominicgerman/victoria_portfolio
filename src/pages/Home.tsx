@@ -1,3 +1,4 @@
+import { Outlet } from 'react-router-dom'
 import List from '../components/List'
 
 export default function Home() {
@@ -8,6 +9,7 @@ export default function Home() {
         JPMorgan Chase.
       </h2>
       <List />
+      <Outlet />
     </div>
   )
 }

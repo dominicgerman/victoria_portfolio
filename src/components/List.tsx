@@ -12,7 +12,7 @@ export default function List() {
       <h3>Work</h3>
       <div className="flex flex-col gap-7">
         {data?.map((item: any, i: number) => (
-          <Link key={item._id} to={`./case-studies/${item._id}`}>
+          <Link key={item._id} to={`/case-studies/${item.index}`}>
             <span>🔒 {item.hero.title}</span>
           </Link>
         ))}

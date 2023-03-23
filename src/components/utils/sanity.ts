@@ -1,4 +1,6 @@
 import { createClient } from '@sanity/client'
+import imageUrlBuilder from '@sanity/image-url'
+
 // Import using ESM URL imports in environments that supports it:
 // import {createClient} from 'https://esm.sh/@sanity/client'
 
@@ -14,17 +16,16 @@ export const client = createClient({
 
 // uses GROQ to query content: https://www.sanity.io/docs/groq
 export async function getCaseStudies() {
-  const docs = await client.fetch('*[_type == "case-study"]')
+  const docs = await client.fetch('*[_type == "case-study"] | order(index asc)')
   return docs
 }
-// const data = await client.getDocuments([])
 
-// export async function createPost(post: Post) {
-//   const result = client.create(post)
-//   return result
-// }
+// Get a pre-configured url-builder from your sanity client
+const builder = imageUrlBuilder(client)
 
-// export async function updateDocumentTitle(_id, title) {
-//   const result = client.patch(_id).set({title})
-//   return result
-// }
+// Then we like to make a simple function like this that gives the
+// builder an image and returns the builder for you to specify additional
+// parameters:
+export function urlFor(source) {
+  return builder.image(source)
+}

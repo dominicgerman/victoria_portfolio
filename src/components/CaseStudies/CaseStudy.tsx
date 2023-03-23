@@ -5,31 +5,36 @@ import Detail from './Details'
 import Pagination from '../Pagination'
 import Context from './Context'
 import CaseStudyContext from '../utils/CaseStudyContext'
+import { urlFor } from '../utils/sanity'
 
 export default function CaseStudy() {
-  // const { pathname } = useLocation()
-
+  const { pathname } = useLocation()
   const data = useContext(CaseStudyContext)
+
+  const { context, details, hero, index, link, otherDetails, outcomes } =
+    data.filter((el: any) => el.index.toString() === pathname.slice(-1))[0]
+
+  console.log(context, details, hero, index, link, otherDetails, outcomes)
 
   return (
     <>
-      {
-        /* <Hero
-        title={hero.Title}
-        role={hero.Role}
-        description={hero.Description}
-        img={hero.image.data.attributes.formats.large.url}
-      /> */
-        <Context context={data[0].context} />
-        /* <ul>
-        {details.map((item: { id: number; text: string; image: any }) => (
+      <Hero hero={hero} />
+      <Context
+        context={context}
+        outcomes={outcomes}
+        otherDetails={otherDetails}
+      />
+
+      <ul>
+        {details.map((item: { _key: string; caption: string; asset: any }) => (
           <Detail
-            key={item.id}
-            image={item.image.data.attributes.formats.large.url}
-            text={item.text}
+            key={item._key}
+            imageUrl={urlFor(item.asset._ref).toString()}
+            text={item.caption}
           ></Detail>
         ))}
       </ul>
+
       <p className="text-center text-xl">
         Check out the{' '}
         <Link to={link.url}>
@@ -37,8 +42,8 @@ export default function CaseStudy() {
         </Link>{' '}
         for yourself.
       </p>
-      <Pagination length={length} id={id} /> */
-      }
+
+      <Pagination length={data.length} id={index} />
     </>
   )
 }
