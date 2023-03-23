@@ -3,18 +3,11 @@ type Props = {
 }
 
 export default function Context({ context }: Props) {
-  const { id, Description, SprintDetails, Outcome } = context[0]
+  console.log(context)
 
-  const businessOutcomes = Outcome.filter(
-    (item: any) => item.Type === 'Business'
-  )
-
-  const productOutcomes = Outcome.filter((item: any) => item.Type === 'Product')
-
-  console.log(Description, context, businessOutcomes)
   return (
     <div className="max-w-5xl mx-auto text-2xl">
-      <p className="mb-8 font-bold">Context</p>
+      {/* <p className="mb-8 font-bold">Context</p>
       <p className="mb-36">{Description}</p>
       {Outcome ? (
         <div className="grid grid-cols-2">
@@ -39,9 +32,9 @@ export default function Context({ context }: Props) {
       {SprintDetails ? (
         <>
           <p className="mb-8 font-bold">Design Sprint</p>
-          <p className="mb-36">{SprintDetails}</p>
+          <p className="mb-36">{}</p>
         </>
-      ) : null}
+      ) : null} */}
     </div>
   )
 }

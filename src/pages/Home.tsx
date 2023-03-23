@@ -1,8 +1,4 @@
-import { Link } from 'react-router-dom'
-import { useQuery } from 'react-query'
-import axios from 'axios'
-import db from '../assets/db.json'
-import List from './CaseStudies/List'
+import List from '../components/List'
 
 export default function Home() {
   return (
