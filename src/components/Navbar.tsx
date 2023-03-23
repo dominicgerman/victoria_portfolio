@@ -7,7 +7,7 @@ export default function Navbar() {
         Victoria German
       </NavLink>
       <div className="flex gap-4">
-        <NavLink to="/" className=" text-lg">
+        <NavLink to="/case-studies" className=" text-lg">
           Work
         </NavLink>
         <NavLink to="/about" className=" text-lg">

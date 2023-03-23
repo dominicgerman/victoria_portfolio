@@ -2,24 +2,35 @@ import { Link } from 'react-router-dom'
 import insta from '../assets/insta.png'
 import dribble from '../assets/dribble.png'
 import linkedin from '../assets/linkedin.png'
-import db from '../assets/db.json'
+import { useQuery } from 'react-query'
+import { getAboutPage } from '../components/utils/sanity'
 
 export default function About() {
-  const { content, skills, clients, contact } = db.about
+  const { data, isLoading, isError, error } = useQuery('about', () =>
+    getAboutPage()
+  )
+
+  if (isLoading) return <h2>Loading</h2>
+
+  if (isError) return <h2>{error.message}</h2>
+
+  console.log(data)
+  const { content, clients, skills } = data[0]
+
   return (
     <>
       <div className="flex flex-col gap-4 my-24">
-        {content.map((el) => (
-          <p key={el.id} className="text-lg max-w-xl">
-            {el.text}
+        {content?.map((el: string, i: number) => (
+          <p key={i} className="text-lg max-w-xl">
+            {el}
           </p>
         ))}
       </div>
       <div className="grid grid-cols-3">
         <div>
-          <h3 className="text-4xl mb-8">{skills.heading}</h3>
+          <h3 className="text-4xl mb-8">Skills</h3>
           <ul className="flex flex-col gap-4">
-            {skills.items.map((item) => (
+            {skills.map((item: string) => (
               <li key={item} className="text-2xl">
                 {item}
               </li>
@@ -27,9 +38,9 @@ export default function About() {
           </ul>
         </div>
         <div>
-          <h3 className="text-4xl mb-8">{clients.heading}</h3>
+          <h3 className="text-4xl mb-8">Select clients</h3>
           <ul className="flex flex-col gap-4">
-            {clients.items.map((item) => (
+            {clients?.map((item: string) => (
               <li key={item} className="text-2xl">
                 {item}
               </li>
@@ -37,19 +48,19 @@ export default function About() {
           </ul>
         </div>
         <div>
-          <h3 className="text-4xl mb-8">{contact.heading}</h3>
+          <h3 className="text-4xl mb-8">Say hello</h3>
           <p className="text-2xl mb-8">
-            {contact.content}
+            Looking to get in touch? I would love to hear from you, feel free to{' '}
             <Link
               to="#"
               className="underline underline-offset-2 text-2xl"
               onClick={(e) => {
-                window.location.href = `${contact.link.url}`
+                window.location.href =
+                  'mailto:victoriamiagerman@gmail.com?subject=Hello'
                 e.preventDefault()
               }}
             >
-              {' '}
-              {contact.link.text}
+              get it touch
             </Link>
             .{' '}
           </p>

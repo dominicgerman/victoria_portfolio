@@ -14,8 +14,6 @@ export default function CaseStudy() {
   const { context, details, hero, index, link, otherDetails, outcomes } =
     data.filter((el: any) => el.index.toString() === pathname.slice(-1))[0]
 
-  console.log(context, details, hero, index, link, otherDetails, outcomes)
-
   return (
     <>
       <Hero hero={hero} />

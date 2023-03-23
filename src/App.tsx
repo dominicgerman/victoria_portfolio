@@ -10,11 +10,12 @@ import Home from './pages/Home'
 import Navbar from './components/Navbar'
 import Login from './components/utils/Login'
 import CaseStudy from './components/CaseStudies/CaseStudy'
+import CaseStudyList from './components/CaseStudies/CaseStudyList'
 const LazyAbout = React.lazy(() => import('./pages/About'))
 
 export default function App() {
   // fetch data for all case studies
-  const { data } = useQuery('case-studies', () => {
+  const { data, isLoading } = useQuery('case-studies', () => {
     return getCaseStudies()
   })
 
@@ -24,7 +25,17 @@ export default function App() {
         <Layout>
           <Navbar />
           <Routes>
-            <Route path="/" element={<Home />}></Route>
+            <Route path="/" element={<Home />} />
+            <Route
+              path="/case-studies"
+              element={
+                <RequireAuth>
+                  <CaseStudyList isLoading={isLoading} />
+                </RequireAuth>
+              }
+            >
+              {' '}
+            </Route>
             <Route
               path="/case-studies/:index"
               element={
@@ -32,8 +43,9 @@ export default function App() {
                   <CaseStudy />
                 </RequireAuth>
               }
-            ></Route>
-            <Route path="/login" element={<Login />}></Route>
+            />
+
+            <Route path="/login" element={<Login />} />
             <Route
               path="about"
               element={
@@ -41,7 +53,7 @@ export default function App() {
                   <LazyAbout />
                 </React.Suspense>
               }
-            ></Route>
+            />
           </Routes>
         </Layout>
       </AuthProvider>

@@ -1,5 +1,4 @@
-import { Outlet } from 'react-router-dom'
-import List from '../components/List'
+import CaseStudyList from '../components/CaseStudies/CaseStudyList'
 
 export default function Home() {
   return (
@@ -8,8 +7,7 @@ export default function Home() {
         A lifelong Chicago native, I am currently a Product Design Lead at
         JPMorgan Chase.
       </h2>
-      <List />
-      <Outlet />
+      <CaseStudyList />
     </div>
   )
 }
