@@ -3,18 +3,23 @@ import insta from '../assets/insta.png'
 import dribble from '../assets/dribble.png'
 import linkedin from '../assets/linkedin.png'
 import { useQuery } from 'react-query'
-import { getAboutPage } from '../components/utils/sanity'
+import { client } from '../components/utils/sanity'
 
 export default function About() {
-  const { data, isLoading, isError, error } = useQuery('about', () =>
-    getAboutPage()
-  )
+  const { data, isLoading, isError, error } = useQuery('about', async () => {
+    try {
+      const response = await client.fetch('*[_type == "about"]')
+      return response
+    } catch (error) {
+      console.error(error)
+    }
+  })
 
   if (isLoading) return <h2>Loading</h2>
 
+  // @ts-ignore
   if (isError) return <h2>{error.message}</h2>
 
-  console.log(data)
   const { content, clients, skills } = data[0]
 
   return (
