@@ -1,7 +1,13 @@
+import {
+  Context as ContextProps,
+  Outcomes,
+  OtherDetails,
+} from './CaseStudy.types'
+
 type Props = {
-  context: any
-  outcomes: any
-  otherDetails: any
+  context: ContextProps
+  outcomes: Outcomes
+  otherDetails: OtherDetails
 }
 
 export default function Context({ context, outcomes, otherDetails }: Props) {
@@ -20,7 +26,7 @@ export default function Context({ context, outcomes, otherDetails }: Props) {
           <div className="mb-36">
             <p className="mb-8 font-bold">Business Outcomes</p>
             <ul>
-              {outcomes.business.map((item: any) => (
+              {outcomes.business.map((item) => (
                 <li key={item} className="mb-3 mx-8 -indent-6">
                   {item}
                 </li>
@@ -30,7 +36,7 @@ export default function Context({ context, outcomes, otherDetails }: Props) {
           <div>
             <p className="mb-8 font-bold">Product Outcomes</p>
             <ul>
-              {outcomes.product.map((item: any) => (
+              {outcomes.product.map((item) => (
                 <li key={item} className="mb-3 mx-8 -indent-6">
                   {item}
                 </li>

@@ -6,13 +6,25 @@ import Pagination from '../Pagination'
 import Context from './Context'
 import CaseStudyContext from '../utils/CaseStudyContext'
 import { urlFor } from '../utils/sanity'
+import { CaseStudyProps } from './CaseStudy.types'
 
 export default function CaseStudy() {
   const { pathname } = useLocation()
   const data = useContext(CaseStudyContext)
 
-  const { context, details, hero, index, link, otherDetails, outcomes } =
-    data.filter((el: any) => el.index.toString() === pathname.slice(-1))[0]
+  console.log(data)
+
+  const {
+    context,
+    details,
+    hero,
+    index,
+    link,
+    otherDetails,
+    outcomes,
+  }: CaseStudyProps = data.filter(
+    (el: CaseStudyProps) => el.index.toString() === pathname.slice(-1)
+  )[0]
 
   return (
     <>
@@ -24,7 +36,7 @@ export default function CaseStudy() {
       />
 
       <ul>
-        {details.map((item: { _key: string; caption: string; asset: any }) => (
+        {details.map((item) => (
           <Detail
             key={item._key}
             imageUrl={urlFor(item.asset._ref).toString()}

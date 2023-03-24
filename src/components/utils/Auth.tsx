@@ -2,7 +2,7 @@ import { createContext, useState, useContext } from 'react'
 
 const AuthContext = createContext(null as any)
 
-type Props = { children: any }
+type Props = { children: JSX.Element | React.ReactElement }
 
 export default function AuthProvider({ children }: Props) {
   const [user, setUser] = useState(false)

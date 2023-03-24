@@ -6,7 +6,7 @@ import { useQuery } from 'react-query'
 import { client } from '../components/utils/sanity'
 
 export default function About() {
-  const { data, isLoading, isError, error } = useQuery('about', async () => {
+  const { data, isLoading } = useQuery('about', async () => {
     try {
       const response = await client.fetch('*[_type == "about"]')
       return response
@@ -16,9 +16,6 @@ export default function About() {
   })
 
   if (isLoading) return <h2>Loading</h2>
-
-  // @ts-ignore
-  if (isError) return <h2>{error.message}</h2>
 
   const { content, clients, skills } = data[0]
 

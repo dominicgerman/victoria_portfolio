@@ -1,7 +1,8 @@
 import { urlFor } from '../utils/sanity'
+import { Hero as HeroProps } from './CaseStudy.types'
 
 type Props = {
-  hero: any
+  hero: HeroProps
 }
 
 export default function Hero({ hero }: Props) {

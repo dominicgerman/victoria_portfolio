@@ -15,22 +15,16 @@ import CaseStudyList from './components/CaseStudies/CaseStudyList'
 
 export default function App() {
   // fetch data for all case studies
-  const { data, isLoading, isError, error } = useQuery(
-    'case-studies',
-    async () => {
-      try {
-        const response = await client.fetch(
-          '*[_type == "case-study"] | order(index asc)'
-        )
-        return response
-      } catch (error) {
-        console.error(error)
-      }
+  const { data, isLoading } = useQuery('case-studies', async () => {
+    try {
+      const response = await client.fetch(
+        '*[_type == "case-study"] | order(index asc)'
+      )
+      return response
+    } catch (error) {
+      console.error(error)
     }
-  )
-
-  // @ts-ignore
-  if (isError) return <h1>{error.message}</h1>
+  })
 
   return (
     <CaseStudyContext.Provider value={data}>

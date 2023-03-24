@@ -2,11 +2,18 @@ import { useContext } from 'react'
 import CaseStudyContext from '../utils/CaseStudyContext'
 import { Link, useLocation } from 'react-router-dom'
 
-type Props = {}
+type Props = { isLoading: boolean }
+type CaseStudy = {
+  _id: string
+  index: number
+  hero: {
+    title: string
+  }
+}
 
-export default function CaseStudyList({ isLoading }: any) {
+export default function CaseStudyList({ isLoading }: Props) {
   const { pathname } = useLocation()
-  const data = useContext(CaseStudyContext)
+  const data: [] = useContext(CaseStudyContext)
 
   const style = `grid grid-cols-2 text-4xl max-w-4xl transition-opacity duration-1000 ${
     !isLoading ? 'opacity-100' : 'opacity-0'
@@ -16,7 +23,7 @@ export default function CaseStudyList({ isLoading }: any) {
       <div className={style}>
         <h3>Work</h3>
         <div className="flex flex-col gap-7">
-          {data?.map((item: any) => (
+          {data?.map((item: CaseStudy) => (
             <Link key={item._id} to={`/case-studies/${item.index}`}>
               <span>
                 {pathname === '/case-studies' ? '→' : '🔒'} {item.hero.title}
