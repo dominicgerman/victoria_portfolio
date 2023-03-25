@@ -22,7 +22,6 @@ export async function getAllData() {
 
 export async function getCaseStudies() {
   const docs = await client.fetch('*[_type == "case-study"] | order(index asc)')
-  console.log('called!')
   return docs
 }
 

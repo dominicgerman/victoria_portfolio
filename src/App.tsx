@@ -15,7 +15,7 @@ import CaseStudyList from './components/CaseStudies/CaseStudyList'
 
 export default function App() {
   // fetch data for all case studies
-  const { data, isLoading } = useQuery('case-studies', async () => {
+  const { data } = useQuery('case-studies', async () => {
     try {
       const response = await client.fetch(
         '*[_type == "case-study"] | order(index asc)'
@@ -37,7 +37,7 @@ export default function App() {
               path="/case-studies"
               element={
                 <RequireAuth>
-                  <CaseStudyList isLoading={isLoading} />
+                  <CaseStudyList />
                 </RequireAuth>
               }
             >

@@ -12,8 +12,6 @@ export default function CaseStudy() {
   const { pathname } = useLocation()
   const data = useContext(CaseStudyContext)
 
-  console.log(data)
-
   const {
     context,
     details,
