@@ -13,7 +13,7 @@ type Props = {
 export default function Context({ context, outcomes, otherDetails }: Props) {
   return (
     <div className="max-w-5xl mx-auto text-2xl">
-      <div className="mb-36">
+      <div className="mb-28 md:mb-36">
         <p className="mb-8 font-bold">Context</p>
         {context.map((el: string) => (
           <p key={el} className="mb-8">
@@ -22,8 +22,8 @@ export default function Context({ context, outcomes, otherDetails }: Props) {
         ))}
       </div>
       {outcomes ? (
-        <div className="grid grid-cols-2">
-          <div className="mb-36">
+        <div className="mb-28 md:grid grid-cols-2">
+          <div className="mb-20 md:mb-36">
             <p className="mb-8 font-bold">Business Outcomes</p>
             <ul>
               {outcomes.business.map((item) => (

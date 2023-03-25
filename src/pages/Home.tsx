@@ -3,7 +3,7 @@ import CaseStudyList from '../components/CaseStudies/CaseStudyList'
 export default function Home() {
   return (
     <div>
-      <h2 className="text-6xl max-w-4xl my-32">
+      <h2 className="text-4xl md:text-6xl leading-snug max-w-4xl my-20 md:my-32">
         A lifelong Chicago native, I am currently a Product Design Lead at
         JPMorgan Chase.
       </h2>

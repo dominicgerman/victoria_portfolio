@@ -3,5 +3,5 @@ type Props = {
 }
 
 export default function Layout({ children }: Props) {
-  return <div className="mx-16 my-10 font-body">{children}</div>
+  return <div className="mx-6 md:mx-16 my-6 md:my-10 font-body">{children}</div>
 }

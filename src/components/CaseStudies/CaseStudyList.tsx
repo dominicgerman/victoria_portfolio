@@ -1,8 +1,8 @@
 import { useContext } from 'react'
 import CaseStudyContext from '../utils/CaseStudyContext'
 import { Link, useLocation } from 'react-router-dom'
+import { useAuth } from '../utils/Auth'
 
-type Props = { isLoading: boolean }
 type CaseStudy = {
   _id: string
   index: number
@@ -11,22 +11,25 @@ type CaseStudy = {
   }
 }
 
-export default function CaseStudyList({ isLoading }: Props) {
+export default function CaseStudyList() {
   const { pathname } = useLocation()
+  const { user } = useAuth()
   const data: [] = useContext(CaseStudyContext)
 
-  const style = `grid grid-cols-2 text-4xl max-w-4xl transition-opacity duration-1000 ${
-    !isLoading ? 'opacity-100' : 'opacity-0'
-  } ${pathname === '/case-studies' ? 'mt-36 mx-8' : ''}`
+  const style = `text-3xl md:text-4xl max-w-4xl mb-32 ${
+    pathname === '/case-studies'
+      ? 'my-20 md:mt-36 md:mx-8'
+      : 'block md:grid grid-cols-2'
+  } `
   return (
     <>
       <div className={style}>
-        <h3>Work</h3>
+        <h3 className="mb-8 md:mb-16">Work</h3>
         <div className="flex flex-col gap-7">
           {data?.map((item: CaseStudy) => (
             <Link key={item._id} to={`/case-studies/${item.index}`}>
               <span>
-                {pathname === '/case-studies' ? '→' : '🔒'} {item.hero.title}
+                {user ? '→' : '🔒'} {item.hero.title}
               </span>
             </Link>
           ))}

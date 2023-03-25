@@ -20,15 +20,15 @@ export default function About() {
   const { content, clients, skills } = data[0]
 
   return (
-    <>
-      <div className="flex flex-col gap-4 my-24">
+    <div className="mb-32">
+      <div className="flex flex-col gap-4 my-16 md:my-24">
         {content?.map((el: string, i: number) => (
           <p key={i} className="text-lg max-w-xl">
             {el}
           </p>
         ))}
       </div>
-      <div className="grid grid-cols-3">
+      <div className="flex flex-col gap-16 md:grid md:grid-cols-3">
         <div>
           <h3 className="text-4xl mb-8">Skills</h3>
           <ul className="flex flex-col gap-4">
@@ -80,6 +80,6 @@ export default function About() {
           </div>
         </div>
       </div>
-    </>
+    </div>
   )
 }
