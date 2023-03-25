@@ -5,7 +5,7 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
   const style = `${
     isOpen ? '' : 'hidden'
-  } absolute top-full h-screen w-full bg-amber-50 z-10 md:inline-block md:static md:h-auto md:w-auto bg-none`
+  } absolute top-full h-screen w-full bg-main z-10 md:inline-block md:static md:h-auto md:w-auto bg-none`
 
   return (
     <nav className="flex items-center justify-between relative">
@@ -21,10 +21,10 @@ export default function Navbar() {
       </button>
       <div className={style}>
         <div
-          className={`flex flex-col gap-12 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-3/4 md:static md: md:translate-x-0 md:translate-y-0 md:flex-row `}
+          className={`flex flex-col gap-12 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-3/4 md:static md: md:translate-x-0 md:translate-y-0 md:flex-row font-accent`}
         >
           <NavLink
-            to="/case-studies"
+            to="/"
             className="text-4xl text-center md:text-lg"
             onClick={() => setIsOpen(false)}
           >

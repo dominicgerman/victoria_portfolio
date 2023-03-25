@@ -28,8 +28,8 @@ export default function CaseStudyList() {
         <div className="flex flex-col gap-7">
           {data?.map((item: CaseStudy) => (
             <Link key={item._id} to={`/case-studies/${item.index}`}>
-              <span>
-                {user ? '→' : '🔒'} {item.hero.title}
+              <span className="underline underline-offset-8 decoration-1">
+                {user ? '🔓' : '🔒'} {item.hero.title}
               </span>
             </Link>
           ))}

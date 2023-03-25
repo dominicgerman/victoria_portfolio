@@ -34,7 +34,7 @@ export default function CaseStudy() {
       />
 
       <ul>
-        {details.map((item) => (
+        {details?.map((item) => (
           <Detail
             key={item._key}
             imageUrl={urlFor(item.asset._ref).toString()}
@@ -45,8 +45,8 @@ export default function CaseStudy() {
 
       <p className="text-center text-xl">
         Check out the{' '}
-        <Link to={link.url}>
-          <span className="underline underline-offset-2">{link.text}</span>
+        <Link to={link?.url} target="_blank">
+          <span className="underline underline-offset-2">{link?.text}</span>
         </Link>{' '}
         for yourself.
       </p>

@@ -33,7 +33,7 @@ export default function About() {
           <h3 className="text-4xl mb-8">Skills</h3>
           <ul className="flex flex-col gap-4">
             {skills.map((item: string) => (
-              <li key={item} className="text-2xl">
+              <li key={item} className="text-2xl font-accent">
                 {item}
               </li>
             ))}
@@ -43,7 +43,7 @@ export default function About() {
           <h3 className="text-4xl mb-8">Select clients</h3>
           <ul className="flex flex-col gap-4">
             {clients?.map((item: string) => (
-              <li key={item} className="text-2xl">
+              <li key={item} className="text-2xl font-accent">
                 {item}
               </li>
             ))}
@@ -51,7 +51,7 @@ export default function About() {
         </div>
         <div>
           <h3 className="text-4xl mb-8">Say hello</h3>
-          <p className="text-2xl mb-8">
+          <p className="text-2xl mb-8 font-accent">
             Looking to get in touch? I would love to hear from you, feel free to{' '}
             <Link
               to="#"
@@ -67,14 +67,17 @@ export default function About() {
             .{' '}
           </p>
           <div className="flex gap-4">
-            <Link to="https://www.instagram.com/toriamia/">
+            <Link to="https://www.instagram.com/toriamia/" target="_blank">
               <img src={insta} alt="" height={20} width={20} />
             </Link>
-            <Link to="https://www.linkedin.com/in/victoriapalacios/">
+            <Link
+              to="https://www.linkedin.com/in/victoriapalacios/"
+              target="_blank"
+            >
               {' '}
               <img src={linkedin} alt="" height={20} width={20} />
             </Link>
-            <Link to="https://dribbble.com/toriamia">
+            <Link to="https://dribbble.com/toriamia" target="_blank">
               <img src={dribble} alt="" height={20} width={20} />
             </Link>
           </div>

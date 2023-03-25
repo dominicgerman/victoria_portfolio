@@ -2,6 +2,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@font-face {
+  font-family: 'ORPHEUS';
+  src: url('../public/ORPHEUS.otf');
+}
 
 nav div a.active {
   text-decoration: underline;
@@ -9,6 +13,6 @@ nav div a.active {
 }
 
 html {
-  background-color: #fffbeb;
+  background-color: rgb(240, 239, 237);
   font-family: 'EB Garamond, serif';
 }

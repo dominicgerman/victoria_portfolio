@@ -15,8 +15,8 @@ export default function Context({ context, outcomes, otherDetails }: Props) {
     <div className="max-w-5xl mx-auto text-2xl">
       <div className="mb-28 md:mb-36">
         <p className="mb-8 font-bold">Context</p>
-        {context.map((el: string) => (
-          <p key={el} className="mb-8">
+        {context?.map((el: string) => (
+          <p key={el} className="mb-8 font-accent">
             {el}
           </p>
         ))}
@@ -26,8 +26,8 @@ export default function Context({ context, outcomes, otherDetails }: Props) {
           <div className="mb-20 md:mb-36">
             <p className="mb-8 font-bold">Business Outcomes</p>
             <ul>
-              {outcomes.business.map((item) => (
-                <li key={item} className="mb-3 mx-8 -indent-6">
+              {outcomes?.business.map((item) => (
+                <li key={item} className="mb-3 mx-8 -indent-6 font-accent">
                   {item}
                 </li>
               ))}
@@ -36,8 +36,8 @@ export default function Context({ context, outcomes, otherDetails }: Props) {
           <div>
             <p className="mb-8 font-bold">Product Outcomes</p>
             <ul>
-              {outcomes.product.map((item) => (
-                <li key={item} className="mb-3 mx-8 -indent-6">
+              {outcomes?.product.map((item) => (
+                <li key={item} className="mb-3 mx-8 -indent-6 font-accent">
                   {item}
                 </li>
               ))}
@@ -47,8 +47,8 @@ export default function Context({ context, outcomes, otherDetails }: Props) {
       ) : null}
       {otherDetails ? (
         <div className="mb-36">
-          <p className="mb-8 font-bold">{otherDetails.heading}</p>
-          <p>{otherDetails.text}</p>
+          <p className="mb-8 font-bold">{otherDetails?.heading}</p>
+          <p className="font-accent">{otherDetails?.text}</p>
         </div>
       ) : null}
     </div>

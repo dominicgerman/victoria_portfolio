@@ -33,16 +33,7 @@ export default function App() {
           <Navbar />
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route
-              path="/case-studies"
-              element={
-                <RequireAuth>
-                  <CaseStudyList />
-                </RequireAuth>
-              }
-            >
-              {' '}
-            </Route>
+
             <Route
               path="/case-studies/:index"
               element={

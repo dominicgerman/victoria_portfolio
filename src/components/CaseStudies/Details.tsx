@@ -6,7 +6,9 @@ export default function Detail({ imageUrl, text }: Props) {
       <div className="drop-shadow-sm">
         <img src={imageUrl} alt="" className="w-full rounded-2xl" />
       </div>
-      <p className="text-xl text-center py-4 drop-shadow-sm">{text}</p>
+      <p className="text-xl text-center py-4 drop-shadow-sm font-accent">
+        {text}
+      </p>
     </div>
   )
 }

@@ -3,15 +3,15 @@ module.exports = {
   content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
   theme: {
     extend: {
-      gridTemplateRows: {
-        // Simple 9 row grid
-        9: 'repeat(9, minmax(0, 1fr))',
+      colors: {
+        main: 'rgb(240, 239, 237)',
       },
       maxHeight: {
         128: '32rem',
       },
       fontFamily: {
-        body: ['EB Garamond', 'serif'],
+        body: ['ORPHEUS', 'serif'],
+        accent: ['EB Garamond', 'serif'],
       },
     },
   },
