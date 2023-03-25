@@ -23,7 +23,7 @@ export default function About() {
     <div className="mb-32">
       <div className="flex flex-col gap-4 my-16 md:my-24">
         {content?.map((el: string, i: number) => (
-          <p key={i} className="text-lg max-w-xl">
+          <p key={i} className="text-xl max-w-xl">
             {el}
           </p>
         ))}
