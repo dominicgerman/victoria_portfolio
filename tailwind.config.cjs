@@ -10,7 +10,7 @@ module.exports = {
         128: '32rem',
       },
       fontFamily: {
-        body: ['ORPHEUS', 'serif'],
+        body: ['Playfair Display', 'serif'],
         accent: ['EB Garamond', 'serif'],
       },
     },
