@@ -3,10 +3,6 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@font-face {
-  font-family: 'ORPHEUS';
-  src: url('../public/ORPHEUS.otf');
-}
 
 nav div a.active {
   text-decoration: underline;
