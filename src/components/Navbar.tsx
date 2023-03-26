@@ -17,7 +17,18 @@ export default function Navbar() {
         className="text-4xl md:hidden z-20"
         onClick={() => setIsOpen(!isOpen)}
       >
-        {isOpen ? <>&#x2715;</> : <>&#9776;</>}
+        <div className={`flex flex-col ${isOpen ? 'gap-0' : 'gap-2'}`}>
+          <div
+            className={`h-px w-8 bg-black ${
+              isOpen ? 'rotate-45 origin-center transition-transform' : ''
+            }`}
+          ></div>
+          <div
+            className={`h-px w-8 bg-black ${
+              isOpen ? '-rotate-45 origin-center transition-transform' : ''
+            }`}
+          ></div>
+        </div>
       </button>
       <div className={style}>
         <div
