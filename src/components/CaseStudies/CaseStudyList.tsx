@@ -1,7 +1,7 @@
 import { useContext } from 'react'
-import CaseStudyContext from '../utils/CaseStudyContext'
+import CaseStudyContext from '../../hooks/CaseStudyContext'
 import { Link, useLocation } from 'react-router-dom'
-import { useAuth } from '../utils/Auth'
+import { useAuth } from '../../utils/Auth'
 
 type CaseStudy = {
   _id: string

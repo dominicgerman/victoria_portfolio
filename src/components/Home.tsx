@@ -1,4 +1,4 @@
-import CaseStudyList from '../components/CaseStudies/CaseStudyList'
+import CaseStudyList from './CaseStudies/CaseStudyList'
 
 export default function Home() {
   return (

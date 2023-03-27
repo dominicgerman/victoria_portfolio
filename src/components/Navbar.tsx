@@ -12,7 +12,6 @@ export default function Navbar() {
       <NavLink to="/" className="text-2xl md:text-3xl">
         Victoria German
       </NavLink>
-      {/* absolute left-full -translate-x-3/4 */}
       <button
         className="text-4xl md:hidden z-20"
         onClick={() => setIsOpen(!isOpen)}

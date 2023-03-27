@@ -3,7 +3,7 @@ import insta from '../assets/insta.png'
 import dribble from '../assets/dribble.png'
 import linkedin from '../assets/linkedin.png'
 import { useQuery } from 'react-query'
-import { client } from '../components/utils/sanity'
+import { client } from '../hooks/sanity'
 
 export default function About() {
   const { data, isLoading } = useQuery('about', async () => {
@@ -17,7 +17,8 @@ export default function About() {
 
   if (isLoading) return <h2>Loading</h2>
 
-  const { content, clients, skills } = data[0]
+  // this line has to come after the isLoading guard clause
+  const { content, skills, clients } = data[0]
 
   return (
     <div className="mb-32">

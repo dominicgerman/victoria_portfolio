@@ -1,17 +1,16 @@
 import React from 'react'
-import { Routes, Route, Outlet } from 'react-router-dom'
+import { Routes, Route } from 'react-router-dom'
 import { useQuery } from 'react-query'
-import { client } from './components/utils/sanity'
-import CaseStudyContext from './components/utils/CaseStudyContext'
-import AuthProvider from './components/utils/Auth'
-import RequireAuth from './components/utils/RequireAuth'
+import { client } from './hooks/sanity'
+import CaseStudyContext from './hooks/CaseStudyContext'
+import AuthProvider from './utils/Auth'
+import RequireAuth from './utils/RequireAuth'
 import Layout from './components/Layout'
-import Home from './pages/Home'
-const LazyAbout = React.lazy(() => import('./pages/About'))
+import Home from './components/Home'
+const LazyAbout = React.lazy(() => import('./components/About'))
 import Navbar from './components/Navbar'
-import Login from './components/utils/Login'
+import Login from './utils/Login'
 import CaseStudy from './components/CaseStudies/CaseStudy'
-import CaseStudyList from './components/CaseStudies/CaseStudyList'
 
 export default function App() {
   // fetch data for all case studies

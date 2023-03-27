@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client'
 import { QueryClientProvider, QueryClient } from 'react-query'
 import { ReactQueryDevtools } from 'react-query/devtools'
 import { BrowserRouter } from 'react-router-dom'
-import ScrollToTop from './components/utils/ScrollToTop'
+import ScrollToTop from './utils/ScrollToTop'
 import App from './App'
 import './index.css'
 

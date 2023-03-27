@@ -1,4 +1,4 @@
-import { urlFor } from '../utils/sanity'
+import { urlFor } from '../../hooks/sanity'
 import { Hero as HeroProps } from './CaseStudy.types'
 
 type Props = {

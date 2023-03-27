@@ -1,28 +1,16 @@
-import { useContext } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import Hero from './Hero'
 import Detail from './Details'
 import Pagination from '../Pagination'
 import Context from './Context'
-import CaseStudyContext from '../utils/CaseStudyContext'
-import { urlFor } from '../utils/sanity'
-import { CaseStudyProps } from './CaseStudy.types'
+import { urlFor } from '../../hooks/sanity'
+import getCaseStudy from '../../hooks/getCaseStudy'
 
 export default function CaseStudy() {
   const { pathname } = useLocation()
-  const data = useContext(CaseStudyContext)
-
-  const {
-    context,
-    details,
-    hero,
-    index,
-    link,
-    otherDetails,
-    outcomes,
-  }: CaseStudyProps = data.filter(
-    (el: CaseStudyProps) => el.index.toString() === pathname.slice(-1)
-  )[0]
+  const { context, details, hero, index, link, otherDetails, outcomes } =
+    getCaseStudy(pathname).caseStudy
+  const { length } = getCaseStudy(pathname)
 
   return (
     <>
@@ -51,7 +39,7 @@ export default function CaseStudy() {
         for yourself.
       </p>
 
-      <Pagination length={data.length} id={index} />
+      <Pagination length={length} id={index} />
     </>
   )
 }
